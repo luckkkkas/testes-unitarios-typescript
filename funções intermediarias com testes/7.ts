@@ -1,4 +1,4 @@
-function groupBy<T, K>(arr: T[], keyFunc: (item: T) => K): Map<K, T[]> {
+export function groupBy<T, K>(arr: T[], keyFunc: (item: T) => K): Map<K, T[]> {
     return arr.reduce((acc, item) => {
         const key = keyFunc(item);
         const group = acc.get(key) || [];
